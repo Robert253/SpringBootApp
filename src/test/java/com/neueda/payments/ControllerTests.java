@@ -1,6 +1,7 @@
 package com.neueda.payments;
 
 import com.neueda.payments.control.CountryController;
+import com.neueda.payments.service.BootstrapService;
 import com.neueda.payments.service.PaymentsService;
 import com.neueda.payments.service.UserService;
 import org.junit.jupiter.api.Test;
@@ -23,6 +24,9 @@ import static org.junit.jupiter.api.Assertions.*;
 public class ControllerTests {
 
     private CountryController countryController;
+
+    @MockBean
+    private BootstrapService bootstrapService;
 
     @Autowired
     public ControllerTests(CountryController countryController) {
